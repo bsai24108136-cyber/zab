@@ -3,7 +3,7 @@ import { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { getAuth } from "@/lib/auth";
 import { toastError } from "@/lib/alerts";
-import { FlaskConical, Plus, X, AlertTriangle, CheckCircle, XCircle, Upload, Brain, Loader2 } from "lucide-react";
+import { FlaskConical, Plus, X, AlertTriangle, CheckCircle, XCircle, Upload, Brain, Loader2, FileText } from "lucide-react";
 
 interface Patient { id: string; full_name: string; }
 interface LabValue { test_name: string; value: number | null; unit: string; reference_low: number | null; reference_high: number | null; status: string; }
