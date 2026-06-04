@@ -1,0 +1,29 @@
+Test Name,Value,Unit,Reference Low,Reference High,Status,Clinical Note
+Serum Creatinine,7.8,mg/dL,0.5,1.2,critical,CRITICAL — Severe acute kidney injury on background CKD Stage 5. Emergency haemodialysis required immediately.
+eGFR,8,mL/min/1.73m2,60.0,999.0,critical,CRITICAL — eGFR <10 indicates end-stage kidney disease. Dialysis initiation required urgently.
+Blood Urea Nitrogen,218,mg/dL,7.0,25.0,critical,CRITICALLY elevated urea — severe uraemia causing confusion and vomiting. Dialysis urgently needed.
+Serum Potassium,6.7,mEq/L,3.5,5.0,critical,DANGEROUS HYPERKALAEMIA — Risk of fatal cardiac arrhythmia. IV Calcium Gluconate STAT. ECG monitoring required.
+Serum Sodium,128,mEq/L,136.0,145.0,critical,CRITICAL hyponatraemia — contributes to confusion. Fluid restriction and careful correction required.
+Serum Bicarbonate,11,mEq/L,22.0,29.0,critical,CRITICAL metabolic acidosis — severe bicarbonate depletion from CKD. IV bicarbonate required.
+Serum Phosphate,9.2,mg/dL,2.5,4.5,critical,CRITICALLY elevated — severe hyperphosphataemia from CKD. Risk of vascular calcification and cardiac arrest.
+Serum Calcium,6.8,mg/dL,8.5,10.5,critical,CRITICAL hypocalcaemia — often accompanies hyperphosphataemia in CKD. Risk of tetany and seizures.
+Haemoglobin,6.2,g/dL,12.0,16.0,critical,CRITICAL anaemia — Hb 6.2 in symptomatic patient. Blood transfusion threshold reached. Urgent transfusion decision required.
+Haematocrit,19.4,%,36.0,46.0,critical,Critically low haematocrit — consistent with severe anaemia of CKD.
+MCV,82.0,fL,80.0,100.0,normal,Normocytic anaemia — consistent with anaemia of chronic disease/CKD.
+WBC,12.8,x10^9/L,4.0,11.0,high,Elevated WBC — possible infection/inflammatory response. Exclude sepsis.
+Neutrophils,78.4,%,40.0,70.0,high,Neutrophilia — supports infective or inflammatory cause. Blood cultures if sepsis suspected.
+Platelets,88,x10^9/L,150.0,400.0,low,Thrombocytopaenia — risk of bleeding. Worsened by Aspirin + Warfarin combination. Urgent haematology review.
+Troponin I,1.2,ng/mL,0.0,0.04,critical,CRITICAL — Elevated troponin indicates acute myocardial injury/NSTEMI. Serial troponins and cardiology STAT consultation required.
+BNP (B-Natriuretic Peptide),4200,pg/mL,0.0,100.0,critical,CRITICAL — BNP 4200 indicates severe acute decompensated heart failure. IV diuresis and cardiology urgent review.
+Fasting Blood Sugar,428,mg/dL,70.0,100.0,critical,CRITICALLY elevated blood glucose — severe hyperglycaemia. Risk of diabetic ketoacidosis/HHS. IV insulin protocol required.
+HbA1c,11.8,%,0.0,7.0,critical,CRITICALLY uncontrolled diabetes — HbA1c 11.8% represents dangerously poor long-term glycaemic control. Endocrinology input needed.
+INR,3.8,ratio,0.0,1.2,critical,CRITICALLY elevated INR — supratherapeutic anticoagulation on Warfarin. Therapeutic range is 2-3 for AF. Bleeding risk very high. HOLD Warfarin. Assess for bleeding.
+Serum Ferritin,1240,ng/mL,12.0,150.0,critical,CRITICALLY elevated ferritin — iron overload from EPO therapy and multiple transfusions. Risk of haemosiderosis. Hold IV iron. Desferrioxamine may be needed.
+Serum Iron,42,ug/dL,60.0,170.0,low,Low serum iron despite high ferritin — confirms functional iron deficiency in CKD. Ferritin unreliable marker in inflammatory state.
+ALT (SGPT),88,U/L,0.0,40.0,high,Elevated liver enzymes — hepatic congestion from heart failure or medication effect. Avoid hepatotoxic drugs.
+AST (SGOT),72,U/L,0.0,40.0,high,Elevated — may reflect cardiac or hepatic injury. Trend with troponin to differentiate source.
+Albumin,2.4,g/dL,3.5,5.0,low,Critically low albumin — severe malnutrition and protein loss. Impairs drug binding and increases free drug toxicity risk.
+CRP (C-Reactive Protein),142,mg/L,0.0,5.0,critical,CRITICALLY elevated CRP — severe systemic inflammation. Exclude sepsis, infective endocarditis, and autoimmune flare.
+Procalcitonin,2.8,ng/mL,0.0,0.25,critical,CRITICAL — procalcitonin elevated — strongly suggests bacterial sepsis. Blood cultures STAT. Empirical IV antibiotics required.
+Urine Output 6hr,90,mL,300.0,999.0,critical,CRITICAL oliguria — urine output <100mL in 6 hours confirms AKI. Catheterise and monitor strict input/output.
+SpO2,91,%,95.0,100.0,critical,CRITICAL — oxygen saturation 91% on 4L O2 indicates respiratory compromise from pulmonary oedema. Consider non-invasive ventilation.

@@ -1,0 +1,112 @@
+PATIENT MEDICAL RECORD
+======================
+Patient Name   : Sarah Ahmed
+Patient ID     : PT-LOW-001
+Date of Birth  : 1990-03-12  (Age: 34)
+Gender         : Female
+Blood Group    : B+
+Contact        : 0300-1234567
+Assigned Doctor: Dr. Imran Khan (General Practice)
+Report Date    : 2025-05-10
+
+─────────────────────────────────────────
+CHIEF COMPLAINT
+─────────────────────────────────────────
+Routine annual health check-up. Patient reports mild fatigue for
+the past 2 weeks, possibly related to increased work stress.
+No significant complaints otherwise.
+
+─────────────────────────────────────────
+VISIT HISTORY (Last 12 months)
+─────────────────────────────────────────
+
+Visit 1 — 2024-06-15
+  Symptoms  : Seasonal allergies, runny nose, mild sneezing
+  Diagnosis : Allergic Rhinitis (mild, seasonal)
+  Notes     : Prescribed Cetirizine 10mg once daily for 7 days.
+              Patient responded well. No follow-up required.
+
+Visit 2 — 2024-09-20
+  Symptoms  : Mild headache, fatigue after long work hours
+  Diagnosis : Tension headache, stress-related fatigue
+  Notes     : Advised rest, hydration, and paracetamol PRN.
+              Blood pressure: 118/74 mmHg — normal.
+              Weight: 58 kg. BMI: 22.3 — healthy range.
+
+Visit 3 — 2025-01-10
+  Symptoms  : Sore throat, mild fever (37.8°C)
+  Diagnosis : Viral pharyngitis (URTI)
+  Notes     : Supportive care. Paracetamol 500mg TDS for 3 days.
+              Advised warm fluids and rest.
+              Throat swab: negative for Group A Strep.
+
+Visit 4 — 2025-05-10 (Current Visit)
+  Symptoms  : Mild fatigue, stress at work, no fever
+  Diagnosis : Occupational stress, mild iron deficiency (borderline)
+  Notes     : CBC shows Hb 11.8 g/dL — slightly low for female.
+              Prescribed Ferrous Sulphate 200mg BD for 4 weeks.
+              Advised dietary changes: more leafy greens, red meat.
+              Blood pressure: 116/72 mmHg. Weight: 57 kg.
+              Blood Sugar (fasting): 88 mg/dL — normal.
+              All other parameters within normal limits.
+
+─────────────────────────────────────────
+CURRENT MEDICATIONS
+─────────────────────────────────────────
+1. Ferrous Sulphate 200mg — Twice daily (BD) — 4 weeks
+   Take with food. Avoid antacids within 2 hours.
+
+─────────────────────────────────────────
+ALLERGIES
+─────────────────────────────────────────
+- Penicillin (mild rash — documented 2019)
+
+─────────────────────────────────────────
+FAMILY HISTORY
+─────────────────────────────────────────
+- Mother: Hypertension (well-controlled, age 60)
+- Father: Type 2 Diabetes (diet-controlled)
+- No family history of cardiac disease, malignancy
+
+─────────────────────────────────────────
+SOCIAL HISTORY
+─────────────────────────────────────────
+- Non-smoker, non-drinker
+- Works as a software developer (sedentary job)
+- Exercises 2x per week (light jogging)
+- Balanced diet, occasional fast food
+
+─────────────────────────────────────────
+ASSESSMENT & PLAN
+─────────────────────────────────────────
+LOW RISK PATIENT — Routine monitoring only.
+
+1. Iron deficiency: Borderline Hb. Start iron supplementation.
+   Repeat CBC in 6 weeks to confirm response.
+2. Stress management: Advised work-life balance, sleep hygiene.
+3. Annual follow-up: Next visit due May 2026.
+4. Vaccination: Influenza vaccine administered today.
+5. Dietary advice: Increase iron-rich foods. Vitamin C with meals.
+
+─────────────────────────────────────────
+VITAL SIGNS (Current Visit)
+─────────────────────────────────────────
+Blood Pressure : 116/72 mmHg   (Normal)
+Heart Rate     : 72 bpm        (Normal)
+Temperature    : 36.8°C        (Afebrile)
+SpO2           : 99%           (Normal)
+Weight         : 57 kg
+Height         : 161 cm
+BMI            : 22.0          (Normal)
+RBS            : 88 mg/dL      (Normal)
+
+─────────────────────────────────────────
+DOCTOR'S SIGNATURE
+─────────────────────────────────────────
+Dr. Imran Khan, MBBS, FCPS
+General Practitioner — MediTrace Clinic
+License No: PMC-0012345
+Date: 2025-05-10
+
+DISCLAIMER: This is an AI-assisted medical record generated for
+testing purposes. Not for clinical use.

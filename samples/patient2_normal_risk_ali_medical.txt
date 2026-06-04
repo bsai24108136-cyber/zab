@@ -1,0 +1,142 @@
+PATIENT MEDICAL RECORD
+======================
+Patient Name   : Ali Hassan
+Patient ID     : PT-NRM-002
+Date of Birth  : 1978-07-25  (Age: 46)
+Gender         : Male
+Blood Group    : O+
+Contact        : 0333-9876543
+Assigned Doctor: Dr. Ayesha Siddiqui (Internal Medicine)
+Report Date    : 2025-05-12
+
+─────────────────────────────────────────
+CHIEF COMPLAINT
+─────────────────────────────────────────
+Patient presents for follow-up of known Type 2 Diabetes and
+hypertension. Both conditions are stable and well-controlled on
+current medications. Reports occasional mild breathlessness
+on exertion (climbing stairs). No chest pain, no syncope.
+
+─────────────────────────────────────────
+VISIT HISTORY (Last 12 months)
+─────────────────────────────────────────
+
+Visit 1 — 2024-05-20
+  Symptoms  : Polyuria, polydipsia, fatigue
+  Diagnosis : Type 2 Diabetes Mellitus (newly diagnosed)
+  Notes     : HbA1c 8.4% at diagnosis. Started Metformin 500mg BD.
+              Dietary counselling provided.
+              Blood pressure: 142/88 mmHg — borderline high.
+              Started Amlodipine 5mg once daily.
+
+Visit 2 — 2024-08-14
+  Symptoms  : Follow-up — no acute complaints
+  Diagnosis : T2DM and Hypertension — monitoring
+  Notes     : HbA1c improved to 7.6%. Good medication compliance.
+              BP: 132/82 mmHg — improving.
+              Weight: 84 kg. BMI: 28.1.
+              Metformin increased to 1000mg BD.
+              Referred for ophthalmology screen — no retinopathy.
+
+Visit 3 — 2024-11-05
+  Symptoms  : Mild exertional breathlessness for 2 weeks
+  Diagnosis : Mild exertional dyspnoea — likely deconditioning
+  Notes     : ECG: Normal sinus rhythm. No ischaemic changes.
+              Echo: EF 58% — preserved. Mild LVH.
+              Lipid profile: LDL 142 mg/dL — elevated.
+              Started Atorvastatin 20mg once daily at night.
+              Advised 30 min brisk walking daily.
+
+Visit 4 — 2025-02-18
+  Symptoms  : Routine review. Breathlessness resolved with exercise.
+  Diagnosis : T2DM improving, Hypertension controlled, Dyslipidaemia
+  Notes     : HbA1c: 7.1%. Excellent trend.
+              BP: 126/78 mmHg — well controlled.
+              LDL: 112 mg/dL — improving on statin.
+              Weight: 82 kg. Lost 2 kg since last visit.
+              Blood Sugar (fasting): 112 mg/dL — acceptable.
+              Creatinine: 1.0 mg/dL — normal.
+
+Visit 5 — 2025-05-12 (Current Visit)
+  Symptoms  : Routine follow-up. No acute complaints.
+  Diagnosis : T2DM — well-controlled. Hypertension — controlled.
+              Dyslipidaemia — responding to treatment.
+  Notes     : HbA1c: 6.9% — at target!
+              Blood Sugar (fasting): 104 mg/dL.
+              Blood Pressure: 124/76 mmHg.
+              Weight: 81 kg (total 3 kg loss in 12 months).
+              LDL: 98 mg/dL — within target.
+              Creatinine: 1.1 mg/dL — stable.
+              eGFR: 74 mL/min — mild CKD Stage 2, monitoring.
+              Liver enzymes mildly elevated (ALT 52 U/L) — recheck
+              in 3 months. Possibly statin-related.
+              Continue all medications. Next HbA1c in 3 months.
+
+─────────────────────────────────────────
+CURRENT MEDICATIONS
+─────────────────────────────────────────
+1. Metformin 1000mg — Twice daily (BD) — Ongoing
+   Take with meals to reduce GI side effects.
+2. Amlodipine 5mg — Once daily (OD) — Ongoing
+   Take in morning. Monitor for ankle swelling.
+3. Atorvastatin 20mg — Once daily at night (HS) — Ongoing
+   Take at night. Avoid grapefruit juice.
+
+─────────────────────────────────────────
+ALLERGIES
+─────────────────────────────────────────
+- NKDA (No Known Drug Allergies)
+
+─────────────────────────────────────────
+FAMILY HISTORY
+─────────────────────────────────────────
+- Father: T2DM, Hypertension, died age 68 (cardiac event)
+- Mother: Hypertension (medicated, alive age 72)
+- Brother: T2DM (on oral medication)
+
+─────────────────────────────────────────
+SOCIAL HISTORY
+─────────────────────────────────────────
+- Non-smoker (quit 2019 — smoked 10 pack-years prior)
+- Occasional alcohol (1-2 units/week — counselled to stop)
+- Works as school teacher (low-moderate activity)
+- Started daily 30-min walks since Nov 2024
+
+─────────────────────────────────────────
+ASSESSMENT & PLAN
+─────────────────────────────────────────
+NORMAL / STABLE RISK PATIENT — Active management, good response.
+
+1. T2DM: HbA1c 6.9% — at target. Continue Metformin 1000mg BD.
+   Next HbA1c in 3 months.
+2. Hypertension: Well-controlled on Amlodipine. Continue.
+3. Dyslipidaemia: LDL at target (<100). Continue Atorvastatin 20mg.
+   Monitor ALT in 3 months — consider dose adjustment if >3x ULN.
+4. CKD Stage 2: eGFR 74 — mild. Annual monitoring.
+   Avoid NSAIDs. Stay hydrated.
+5. Weight: Continue lifestyle modifications. Target BMI <25.
+6. Ophthalmology: Annual review — next due Nov 2025.
+7. Foot exam: Annual diabetic foot check due — refer podiatry.
+
+─────────────────────────────────────────
+VITAL SIGNS (Current Visit)
+─────────────────────────────────────────
+Blood Pressure : 124/76 mmHg   (Controlled)
+Heart Rate     : 68 bpm        (Normal)
+Temperature    : 36.6°C        (Afebrile)
+SpO2           : 97%           (Normal)
+Weight         : 81 kg
+Height         : 173 cm
+BMI            : 27.1          (Overweight — improving)
+FBS            : 104 mg/dL     (Acceptable)
+
+─────────────────────────────────────────
+DOCTOR'S SIGNATURE
+─────────────────────────────────────────
+Dr. Ayesha Siddiqui, MBBS, MRCP, FCPS (Internal Medicine)
+MediTrace Specialist Clinic
+License No: PMC-0045678
+Date: 2025-05-12
+
+DISCLAIMER: This is an AI-assisted medical record generated for
+testing purposes. Not for clinical use.

@@ -1,0 +1,28 @@
+Test Name,Value,Unit,Reference Low,Reference High,Status,Clinical Note
+Haemoglobin,11.8,g/dL,12.0,16.0,low,Slightly below normal for female. Consistent with mild iron deficiency. Monitor after supplementation.
+Haematocrit,36.2,%,36.0,46.0,normal,Within acceptable range.
+MCV,74.0,fL,80.0,100.0,low,Microcytic — consistent with iron deficiency anaemia.
+MCH,24.1,pg,27.0,33.0,low,Low mean corpuscular haemoglobin. Confirms iron deficiency picture.
+MCHC,31.8,g/dL,31.5,35.0,normal,Lower end of normal.
+RBC,4.52,x10^12/L,3.80,5.20,normal,Normal red cell count.
+WBC,6.8,x10^9/L,4.0,11.0,normal,White cell count normal. No infection or immune issue.
+Neutrophils,58.2,%,40.0,70.0,normal,Normal neutrophil percentage.
+Lymphocytes,33.4,%,20.0,45.0,normal,Normal lymphocyte count.
+Monocytes,5.8,%,2.0,10.0,normal,Normal.
+Eosinophils,2.6,%,1.0,6.0,normal,Slightly elevated — may reflect resolved allergy. Clinically insignificant.
+Platelets,228,x10^9/L,150.0,400.0,normal,Normal platelet count.
+Serum Iron,58,ug/dL,60.0,170.0,low,Below normal. Confirms iron deficiency. Start supplementation.
+TIBC,410,ug/dL,250.0,370.0,high,Elevated TIBC — typical of iron deficiency. Body upregulating transferrin.
+Ferritin,8.2,ng/mL,12.0,150.0,low,Low ferritin confirms depleted iron stores. Dietary and supplementation changes needed.
+Transferrin Saturation,14.1,%,20.0,50.0,low,Low saturation — iron deficiency pattern.
+Fasting Blood Sugar,88,mg/dL,70.0,100.0,normal,Normal fasting glucose. No diabetes concern.
+HbA1c,5.1,%,0.0,5.7,normal,Normal. Excellent glycaemic control.
+Total Cholesterol,172,mg/dL,0.0,200.0,normal,Within desirable range.
+LDL Cholesterol,98,mg/dL,0.0,130.0,normal,Optimal LDL level.
+HDL Cholesterol,58,mg/dL,50.0,999.0,normal,Good HDL level. Cardioprotective.
+Triglycerides,112,mg/dL,0.0,150.0,normal,Normal lipid profile.
+Serum Creatinine,0.72,mg/dL,0.5,1.1,normal,Normal renal function.
+eGFR,98,mL/min/1.73m2,60.0,999.0,normal,Excellent kidney function.
+Urine Protein,Negative,,,,,No proteinuria. Normal urinalysis.
+TSH,2.1,mIU/L,0.4,4.0,normal,Normal thyroid function. No thyroid disorder.
+Vitamin D,28,ng/mL,30.0,100.0,low,Borderline low. Advise sunlight exposure and dietary sources. Supplement if needed.

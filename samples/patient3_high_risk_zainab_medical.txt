@@ -1,0 +1,196 @@
+PATIENT MEDICAL RECORD — HIGH RISK / URGENT
+============================================
+Patient Name   : Zainab Malik
+Patient ID     : PT-HGH-003
+Date of Birth  : 1955-11-08  (Age: 69)
+Gender         : Female
+Blood Group    : A-
+Contact        : 0321-5554444
+Assigned Doctor: Dr. Ayesha Siddiqui (Internal Medicine)
+Report Date    : 2025-05-14
+
+*** ALERT: HIGH RISK PATIENT — MULTIPLE CRITICAL FINDINGS ***
+*** REQUIRES URGENT REVIEW AND IMMEDIATE MANAGEMENT       ***
+
+─────────────────────────────────────────
+CHIEF COMPLAINT
+─────────────────────────────────────────
+Patient presented to clinic via family — brought by daughter.
+Complaints: severe fatigue for 3 weeks, progressive breathlessness
+at rest, bilateral leg swelling, confusion episodes at night,
+reduced urine output for past 4 days, nausea and vomiting.
+Lost 6 kg in 2 months (unintentional).
+History of CKD Stage 3, T2DM, Hypertension, and Ischaemic Heart Disease.
+
+─────────────────────────────────────────
+VISIT HISTORY (Last 18 months)
+─────────────────────────────────────────
+
+Visit 1 — 2023-11-20
+  Symptoms  : Chest pain (exertional), palpitations
+  Diagnosis : Stable Angina. Known IHD (stent 2021).
+  Notes     : ECG: ST depression in V4-V6 — consistent with ischaemia.
+              Troponin I: 0.04 ng/mL — borderline. Referred cardiology.
+              Cardiology: Increased Bisoprolol 5mg to 10mg OD.
+              Added Aspirin 75mg OD and Ramipril 5mg OD.
+              Creatinine: 1.9 mg/dL. eGFR: 38 — CKD Stage 3b.
+
+Visit 2 — 2024-02-14
+  Symptoms  : Leg swelling, shortness of breath on exertion
+  Diagnosis : Cardiac decompensation (CHF NYHA Class II). CKD Stage 3b.
+  Notes     : Echo: EF 38% — reduced. Dilated cardiomyopathy.
+              BNP: 820 pg/mL — significantly elevated.
+              Started Furosemide 40mg OD. Spironolactone 25mg OD.
+              Digoxin 0.125mg OD added (rate control AF detected).
+              CXR: Cardiomegaly with pulmonary congestion.
+              Potassium: 3.4 mEq/L — borderline low. Started KCl supplement.
+
+Visit 3 — 2024-05-30
+  Symptoms  : Poorly controlled BP, recurrent UTIs
+  Diagnosis : Uncontrolled Hypertension. Recurrent UTI.
+              CKD progression (Stage 3b→4 borderline).
+  Notes     : BP: 176/102 mmHg — severely elevated.
+              Creatinine: 2.4 mg/dL. eGFR: 28 — CKD Stage 4.
+              Amlodipine 5mg added. Ramipril dose unchanged.
+              MSU: E. coli — prescribed Ciprofloxacin 500mg BD 7 days.
+              HbA1c: 9.2% — poor glycaemic control.
+              Insulin Glargine 10 units nocte started.
+              Advised strict salt and fluid restriction (<1.5L/day).
+
+Visit 4 — 2024-09-12
+  Symptoms  : Weight gain 4 kg in 2 weeks, worsening swelling
+  Diagnosis : Acute decompensated heart failure. Fluid overload.
+  Notes     : BNP: 1840 pg/mL — severely elevated.
+              Creatinine: 2.8 mg/dL — worsening CKD (approaching Stage 4-5).
+              Furosemide increased to 80mg OD. IV diuresis considered.
+              Potassium: 5.8 mEq/L — hyperkalemia! Stopped KCl supplement.
+              Stopped Spironolactone (hyperkalemia risk with CKD + Ramipril).
+              Cardiology urgent review: Cardiac CRT considered.
+              INR: 2.4 — patient also on Warfarin for AF.
+
+Visit 5 — 2025-01-22
+  Symptoms  : Confusion, memory decline, generalised weakness
+  Diagnosis : Uraemic encephalopathy (CKD Stage 5 approaching).
+              Anaemia of Chronic Kidney Disease.
+              Worsening CHF. Uncontrolled T2DM.
+  Notes     : Creatinine: 4.2 mg/dL — CRITICAL. eGFR: 14 — CKD Stage 5.
+              Hb: 7.1 g/dL — severe anaemia. Started EPO injections.
+              Iron studies: Ferritin 620 ng/mL — iron overload.
+              Urea: 128 mg/dL — severely elevated.
+              Bicarbonate: 14 mEq/L — metabolic acidosis.
+              Phosphate: 6.8 mg/dL — hyperphosphataemia.
+              Referred urgently to Nephrology — dialysis planning.
+              Neurology review for encephalopathy.
+
+Visit 6 — 2025-05-14 (CURRENT — URGENT)
+  Symptoms  : Severe fatigue, breathlessness at rest, confusion, oliguria,
+              bilateral pitting oedema to thigh level, nausea/vomiting.
+  Diagnosis : ** CRITICAL — ACUTE KIDNEY INJURY ON CKD STAGE 5 **
+              ** ACUTE DECOMPENSATED HEART FAILURE (NYHA IV) **
+              ** SEVERE URAEMIA — DIALYSIS URGENTLY REQUIRED  **
+              ** SEVERE UNCONTROLLED DIABETES (HbA1c 11.8%)  **
+              ** ANAEMIA CRITICAL (Hb 6.2 g/dL)              **
+  Notes     : Creatinine: 7.8 mg/dL — CRITICAL. eGFR <10.
+              BNP: 4200 pg/mL — acute cardiac decompensation.
+              Potassium: 6.7 mEq/L — DANGEROUS hyperkalemia.
+              Bicarbonate: 11 mEq/L — severe metabolic acidosis.
+              Troponin I: 1.2 ng/mL — CRITICAL cardiac injury.
+              Blood Sugar: 428 mg/dL — CRITICALLY elevated.
+              HbA1c: 11.8% — severely uncontrolled diabetes.
+              Hb: 6.2 g/dL — critical anaemia (transfusion considered).
+              Urea: 218 mg/dL — uraemia, confusion explained.
+              Phosphate: 9.2 mg/dL — severe hyperphosphataemia.
+              ** PATIENT ADMITTED TO HOSPITAL IMMEDIATELY **
+              IV access established. Emergency haemodialysis initiated.
+              IV bicarbonate and calcium gluconate for hyperkalemia.
+              Cardiology, Nephrology, Endocrinology STAT consult.
+
+─────────────────────────────────────────
+CURRENT MEDICATIONS (Pre-Admission)
+─────────────────────────────────────────
+1. Bisoprolol 10mg — Once daily OD (Cardiology)
+2. Aspirin 75mg — Once daily OD (antiplatelet — IHD)
+3. Ramipril 5mg — Once daily OD (HOLD — AKI present)
+4. Amlodipine 5mg — Once daily OD (Hypertension)
+5. Furosemide 80mg — Once daily OD (CHF)
+6. Digoxin 0.125mg — Once daily OD (rate control AF)
+7. Warfarin 3mg — Once daily OD (INR target 2-3 for AF)
+8. Insulin Glargine 10 units — Nocte (T2DM)
+9. Sevelamer 800mg — TDS with meals (phosphate binder)
+
+*** DANGEROUS INTERACTION: Digoxin toxicity risk with current
+    hypokalaemia/electrolyte imbalance — MONITOR ECG ***
+*** WARFARIN + ASPIRIN: HIGH BLEEDING RISK — REASSESS ***
+
+─────────────────────────────────────────
+ALLERGIES
+─────────────────────────────────────────
+- Sulfonamides (anaphylaxis — bracelet worn)
+- Codeine (severe nausea)
+
+─────────────────────────────────────────
+FAMILY HISTORY
+─────────────────────────────────────────
+- Husband: T2DM (deceased — cardiac event age 72)
+- Son: Hypertension (age 45)
+- Daughter: Hypothyroidism
+- No family history of renal disease
+
+─────────────────────────────────────────
+PAST MEDICAL HISTORY
+─────────────────────────────────────────
+- IHD — Coronary angioplasty + stent (LAD) 2021
+- Type 2 Diabetes — diagnosed 2004 (21 years)
+- Hypertension — diagnosed 2000 (25 years)
+- CKD — progressive, now Stage 5
+- Atrial Fibrillation — diagnosed 2023
+- CHF — diagnosed 2024 (EF 38%)
+- Recurrent UTIs
+- Anaemia of CKD
+
+─────────────────────────────────────────
+ASSESSMENT & PLAN — CRITICAL
+─────────────────────────────────────────
+*** HIGH RISK — MULTI-ORGAN INVOLVEMENT — HOSPITAL ADMISSION ***
+
+1. AKI on CKD: Emergency haemodialysis. Nephrology lead.
+   STOP Ramipril. STOP Metformin (already stopped). HOLD all NSAIDs.
+2. Hyperkalemia (K 6.7): IV Calcium Gluconate STAT.
+   IV Bicarbonate. Kayexalate if HD delayed. Cardiac monitoring.
+3. CHF NYHA IV: IV Furosemide. Fluid restriction. Daily weights.
+   Cardiology review. Echo repeat.
+4. Troponin elevation: Serial troponins. 12-lead ECG monitoring.
+   Rule out NSTEMI.
+5. Uncontrolled DM: Insulin infusion protocol.
+   Target BG 140-180 mg/dL. Endocrinology review.
+6. Anaemia: Group and screen. Transfuse if Hb <6.0 or symptomatic.
+   Continue EPO. IV Iron — check Ferritin trend.
+7. Warfarin + Aspirin: Reassess — high bleeding risk in AKI.
+   Monitor INR. Consider bridge to DOAC after stabilisation.
+8. Digoxin toxicity risk: Monitor ECG. Check Digoxin levels.
+   Correct electrolytes before continuing.
+9. Code status: Discuss DNACPR with family given prognosis.
+   Palliative care input if appropriate.
+
+─────────────────────────────────────────
+VITAL SIGNS (Current Visit — Emergency)
+─────────────────────────────────────────
+Blood Pressure : 188/114 mmHg  *** CRITICALLY HIGH ***
+Heart Rate     : 98 bpm (AF)   Irregular rhythm
+Temperature    : 37.2°C        (Afebrile)
+SpO2           : 91% on 4L O2  *** CRITICAL ***
+Respiratory Rate: 28/min       *** Tachypnoeic ***
+Weight         : 74 kg         (6 kg fluid overload estimated)
+Urine Output   : <100ml/6hrs   *** Oliguric ***
+
+GCS: 13/15 — CONFUSED
+─────────────────────────────────────────
+DOCTOR'S SIGNATURE
+─────────────────────────────────────────
+Dr. Ayesha Siddiqui, MBBS, MRCP, FCPS (Internal Medicine)
+MediTrace Specialist Clinic — Emergency Admission
+License No: PMC-0045678
+Date: 2025-05-14
+
+DISCLAIMER: This is an AI-assisted medical record generated for
+testing purposes. Not for clinical use.

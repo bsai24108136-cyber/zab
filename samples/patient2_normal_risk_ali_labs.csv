@@ -1,0 +1,28 @@
+Test Name,Value,Unit,Reference Low,Reference High,Status,Clinical Note
+Fasting Blood Sugar,104,mg/dL,70.0,100.0,high,Slightly above fasting target. Acceptable for T2DM patient on treatment. Continue Metformin.
+HbA1c,6.9,%,0.0,7.0,normal,At target for diabetic patient. Excellent glycaemic control achieved.
+Post-Prandial Sugar,148,mg/dL,70.0,140.0,high,Mildly elevated 2-hour post-meal glucose. Dietary modification advised.
+Serum Insulin,14.2,uIU/mL,2.0,25.0,normal,Normal insulin level. No evidence of insulin resistance progression.
+C-Peptide,1.8,ng/mL,0.8,3.1,normal,Adequate beta-cell function preserved.
+Total Cholesterol,188,mg/dL,0.0,200.0,normal,Within desirable range. Improving on statin.
+LDL Cholesterol,98,mg/dL,0.0,100.0,normal,At LDL target for diabetic patient. Continue Atorvastatin 20mg.
+HDL Cholesterol,44,mg/dL,40.0,999.0,normal,Low-normal. Advise aerobic exercise to raise HDL.
+Triglycerides,138,mg/dL,0.0,150.0,normal,Normal. Improving with diet and exercise.
+Non-HDL Cholesterol,144,mg/dL,0.0,160.0,normal,Acceptable for CV risk management.
+Haemoglobin,14.2,g/dL,13.0,17.0,normal,Normal for male.
+WBC,7.4,x10^9/L,4.0,11.0,normal,Normal white cell count. No infection.
+Platelets,210,x10^9/L,150.0,400.0,normal,Normal platelet count.
+Serum Creatinine,1.1,mg/dL,0.7,1.2,normal,Upper limit of normal. Monitor for CKD progression.
+eGFR,74,mL/min/1.73m2,60.0,999.0,normal,CKD Stage 2 (mild). Annual monitoring required. Avoid nephrotoxic drugs.
+BUN,18,mg/dL,7.0,25.0,normal,Normal urea nitrogen.
+Urine Protein,Trace,,,,,Trace proteinuria — early diabetic nephropathy risk. Recheck with spot urine ACR.
+Urine ACR,28,mg/g,0.0,30.0,normal,Borderline — upper limit of normal. High-normal microalbuminuria.
+ALT (SGPT),52,U/L,0.0,40.0,high,Mildly elevated. Possibly statin-induced hepatotoxicity. Recheck in 3 months. Stop statin if >3x ULN.
+AST (SGOT),38,U/L,0.0,40.0,normal,Upper limit of normal. Monitor with ALT.
+Alkaline Phosphatase,88,U/L,44.0,147.0,normal,Normal.
+GGT,42,U/L,0.0,61.0,normal,Normal gamma-glutamyl transferase.
+Bilirubin Total,0.9,mg/dL,0.2,1.2,normal,Normal.
+Serum Sodium,139,mEq/L,136.0,145.0,normal,Normal electrolytes.
+Serum Potassium,4.1,mEq/L,3.5,5.0,normal,Normal. Important to monitor on Amlodipine.
+TSH,2.8,mIU/L,0.4,4.0,normal,Normal thyroid function. No thyroid disorder.
+Vitamin B12,310,pg/mL,200.0,900.0,normal,Lower-normal. Metformin can reduce B12 absorption. Monitor annually.
