@@ -146,26 +146,27 @@ export default function DoctorDocumentsPage() {
         </div>
 
         {/* Drop Zone */}
-        <motion.div
-          whileHover={{ scale: 1.003 }}
-          {...getRootProps()}
-          className={`border-2 border-dashed rounded-xl p-8 text-center cursor-pointer transition-all duration-300
-            ${isDragActive ? "border-cyan-400/70 bg-cyan-400/5 shadow-glow-cyan" : "border-white/10 hover:border-white/25"}`}
-        >
-          <input {...getInputProps()} />
-          {uploading ? (
-            <div className="space-y-2">
-              <Loader2 className="w-8 h-8 mx-auto text-cyan-300 animate-spin" />
-              <p className="text-sm text-cyan-200">{uploadStatus}</p>
-            </div>
-          ) : (
-            <div className="space-y-2">
-              <Upload className="w-8 h-8 mx-auto text-ink-200" />
-              <p className="text-sm font-medium text-ink-50">{isDragActive ? "Drop file here" : "Drag & drop or click to upload"}</p>
-              <p className="text-xs text-ink-300">PDF · DOCX · TXT · CSV — max 10MB</p>
-            </div>
-          )}
-        </motion.div>
+        <div {...getRootProps()}>
+          <motion.div
+            whileHover={{ scale: 1.003 }}
+            className={`border-2 border-dashed rounded-xl p-8 text-center cursor-pointer transition-all duration-300
+              ${isDragActive ? "border-cyan-400/70 bg-cyan-400/5 shadow-glow-cyan" : "border-white/10 hover:border-white/25"}`}
+          >
+            <input {...getInputProps()} />
+            {uploading ? (
+              <div className="space-y-2">
+                <Loader2 className="w-8 h-8 mx-auto text-cyan-300 animate-spin" />
+                <p className="text-sm text-cyan-200">{uploadStatus}</p>
+              </div>
+            ) : (
+              <div className="space-y-2">
+                <Upload className="w-8 h-8 mx-auto text-ink-200" />
+                <p className="text-sm font-medium text-ink-50">{isDragActive ? "Drop file here" : "Drag & drop or click to upload"}</p>
+                <p className="text-xs text-ink-300">PDF · DOCX · TXT · CSV — max 10MB</p>
+              </div>
+            )}
+          </motion.div>
+        </div>
         {error && <p className="text-sm text-rose-300 flex items-center gap-1.5"><AlertCircle className="w-4 h-4" />{error}</p>}
       </div>
 

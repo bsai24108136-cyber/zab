@@ -129,38 +129,39 @@ export default function DocumentsPage() {
       </div>
 
       {/* Dropzone */}
-      <motion.div
-        whileHover={{ scale: 1.005 }}
-        {...getRootProps()}
-        className={`glass p-10 border-2 border-dashed text-center cursor-pointer transition-all duration-300
-          ${isDragActive ? "border-cyan-400/70 bg-cyan-400/5 shadow-glow-cyan" : "border-white/10 hover:border-white/25"}`}
-      >
-        <input {...getInputProps()} />
-        {uploading ? (
-          <div className="space-y-3">
-            <Loader2 className="w-10 h-10 mx-auto text-cyan-300 animate-spin" />
-            <p className="text-sm font-medium text-cyan-200">{uploadProgress}</p>
-            <div className="w-48 mx-auto bg-white/5 rounded-full h-1.5 overflow-hidden">
-              <div className="bg-brand-gradient h-1.5 rounded-full animate-pulse w-3/4" />
+      <div {...getRootProps()}>
+        <motion.div
+          whileHover={{ scale: 1.005 }}
+          className={`glass p-10 border-2 border-dashed text-center cursor-pointer transition-all duration-300
+            ${isDragActive ? "border-cyan-400/70 bg-cyan-400/5 shadow-glow-cyan" : "border-white/10 hover:border-white/25"}`}
+        >
+          <input {...getInputProps()} />
+          {uploading ? (
+            <div className="space-y-3">
+              <Loader2 className="w-10 h-10 mx-auto text-cyan-300 animate-spin" />
+              <p className="text-sm font-medium text-cyan-200">{uploadProgress}</p>
+              <div className="w-48 mx-auto bg-white/5 rounded-full h-1.5 overflow-hidden">
+                <div className="bg-brand-gradient h-1.5 rounded-full animate-pulse w-3/4" />
+              </div>
             </div>
-          </div>
-        ) : (
-          <div className="space-y-3">
-            <Upload className="w-10 h-10 mx-auto text-ink-200" />
-            <div>
-              <p className="text-sm font-semibold text-ink-50">
-                {isDragActive ? "Drop file here" : "Drag & drop or click to upload"}
-              </p>
-              <p className="text-xs text-ink-300 mt-1">PDF, DOCX, TXT, CSV — max 10MB</p>
+          ) : (
+            <div className="space-y-3">
+              <Upload className="w-10 h-10 mx-auto text-ink-200" />
+              <div>
+                <p className="text-sm font-semibold text-ink-50">
+                  {isDragActive ? "Drop file here" : "Drag & drop or click to upload"}
+                </p>
+                <p className="text-xs text-ink-300 mt-1">PDF, DOCX, TXT, CSV — max 10MB</p>
+              </div>
+              <div className="flex justify-center gap-2">
+                {["PDF", "DOCX", "TXT", "CSV"].map(t => (
+                  <span key={t} className="text-[10px] font-bold px-2 py-0.5 rounded bg-white/5 text-ink-200">{t}</span>
+                ))}
+              </div>
             </div>
-            <div className="flex justify-center gap-2">
-              {["PDF", "DOCX", "TXT", "CSV"].map(t => (
-                <span key={t} className="text-[10px] font-bold px-2 py-0.5 rounded bg-white/5 text-ink-200">{t}</span>
-              ))}
-            </div>
-          </div>
-        )}
-      </motion.div>
+          )}
+        </motion.div>
+      </div>
 
       {error && (
         <div className="glass-sm p-3 bg-red-900/20 border-red-700/50 flex items-center gap-2 text-sm text-red-300">
