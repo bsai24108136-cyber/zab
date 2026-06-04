@@ -89,7 +89,7 @@ export default function PatientChatPage() {
         model: res.model,
       };
       setMessages(prev => [...prev, assistantMsg]);
-    } catch (err) {
+    } catch {
       toastError("Couldn't reach the assistant", "Please try again in a moment.");
       setMessages(prev => [
         ...prev,

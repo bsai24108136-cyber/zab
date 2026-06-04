@@ -28,9 +28,9 @@ export default function DoctorDashboard() {
     Promise.all([
       apiFetch<Patient[]>("/admin/users").catch(() => []),
       apiFetch<unknown[]>("/documents/").catch(() => []),
-      apiFetch<any>("/notifications/").catch(() => null),
+      apiFetch<unknown>("/notifications/").catch(() => null),
     ]).then(([users, docList, notifs]) => {
-      setPatients(users.filter((u: any) => u?.id && u?.email).slice(0, 10));
+      setPatients(users.filter((u: Patient) => u?.id && u?.email).slice(0, 10));
       setDocs(docList);
       if (notifs) {
         setCriticalCount(notifs.critical_count ?? 0);

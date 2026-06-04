@@ -87,7 +87,7 @@ export default function AdminUsersPage() {
       setResetMsg(`✅ Password reset for ${resetModal.email}`);
       setNewPassword("");
       setTimeout(() => { setResetModal(null); setResetMsg(""); }, 2000);
-    } catch (e: any) { setResetMsg(`❌ ${e.message}`); }
+    } catch (e: unknown) { setResetMsg(`❌ ${e instanceof Error ? e.message : "Unknown error"}`); }
     finally { setResetting(null); }
   }
 
@@ -102,7 +102,7 @@ export default function AdminUsersPage() {
       setAssignMsg("✅ Patient assigned successfully");
       await loadUsers();
       setTimeout(() => { setAssignModal(null); setAssignMsg(""); }, 1500);
-    } catch (e: any) { setAssignMsg(`❌ ${e.message}`); }
+    } catch (e: unknown) { setAssignMsg(`❌ ${e instanceof Error ? e.message : "Unknown error"}`); }
     finally { setAssigning(false); }
   }
 
@@ -118,7 +118,7 @@ export default function AdminUsersPage() {
       setDrForm({ full_name: "", email: "", password: "", specialization: "", phone: "" });
       await loadDoctors();
       setTimeout(() => { setShowCreateDoctor(false); setDrMsg(""); }, 2000);
-    } catch (e: any) { setDrMsg(`❌ ${e.message}`); }
+    } catch (e: unknown) { setDrMsg(`❌ ${e instanceof Error ? e.message : "Unknown error"}`); }
     finally { setDrSaving(false); }
   }
 
@@ -265,7 +265,7 @@ export default function AdminUsersPage() {
           ) : doctors.length === 0 ? (
             <div className="glass p-12 text-center text-gray-500">
               <Stethoscope className="w-10 h-10 mx-auto mb-2 opacity-30" />
-              <p className="text-sm">No doctors added yet. Click "Add Doctor" to create one.</p>
+              <p className="text-sm">No doctors added yet. Click &quot;Add Doctor&quot; to create one.</p>
             </div>
           ) : (
             <div className="glass overflow-hidden">
@@ -413,7 +413,7 @@ export default function AdminUsersPage() {
               ].map(({ label, key, placeholder }) => (
                 <div key={key}>
                   <label className="text-xs text-gray-400 mb-1 block">{label}</label>
-                  <input value={(drForm as any)[key]} onChange={e => setDrForm(f => ({ ...f, [key]: e.target.value }))}
+                  <input value={drForm[key as keyof typeof drForm]} onChange={e => setDrForm(f => ({ ...f, [key]: e.target.value }))}
                     placeholder={placeholder}
                     className="w-full glass-sm px-3 py-2 text-sm text-gray-200 rounded-lg border border-gray-700 focus:border-blue-500/50 outline-none" />
                 </div>

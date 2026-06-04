@@ -5,7 +5,7 @@ import { apiFetch } from "@/lib/api";
 import { fadeUp } from "@/lib/motion";
 import {
   BarChart, Bar, LineChart, Line, PieChart, Pie, Cell,
-  XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer
+  XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer
 } from "recharts";
 import { BarChart3, TrendingUp, Cpu } from "lucide-react";
 

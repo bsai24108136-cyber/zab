@@ -2,8 +2,8 @@
 import { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { getAuth } from "@/lib/auth";
-import { toastError, toastSuccess } from "@/lib/alerts";
-import { FlaskConical, Plus, X, AlertTriangle, CheckCircle, XCircle, Upload, Brain, FileText, Loader2 } from "lucide-react";
+import { toastError } from "@/lib/alerts";
+import { FlaskConical, Plus, X, AlertTriangle, CheckCircle, XCircle, Upload, Brain, Loader2 } from "lucide-react";
 
 interface Patient { id: string; full_name: string; }
 interface LabValue { test_name: string; value: number | null; unit: string; reference_low: number | null; reference_high: number | null; status: string; }
@@ -90,14 +90,14 @@ export default function DoctorLabReportsPage() {
         const r = await apiFetch(`/lab-reports/${selected}`);
         setReports(await r.json());
       }
-    } catch (e: any) { toastError("Something went wrong", e.message); }
+    } catch (e: unknown) { toastError("Something went wrong", e instanceof Error ? e.message : "Unknown error"); }
     finally { setUploading(false); }
   }
 
   function addValueRow() {
     setValues(v => [...v, { test_name: "", value: null, unit: "", reference_low: null, reference_high: null, status: "normal" }]);
   }
-  function updateValue(i: number, field: string, val: any) {
+  function updateValue(i: number, field: string, val: unknown) {
     setValues(v => v.map((row, idx) => idx === i ? { ...row, [field]: val } : row));
   }
 
@@ -118,7 +118,7 @@ export default function DoctorLabReportsPage() {
         const r = await apiFetch(`/lab-reports/${selected}`);
         setReports(await r.json());
       }
-    } catch (e: any) { toastError("Something went wrong", e.message); } finally { setSaving(false); }
+    } catch (e: unknown) { toastError("Something went wrong", e instanceof Error ? e.message : "Unknown error"); } finally { setSaving(false); }
   }
 
   return (
@@ -392,7 +392,7 @@ export default function DoctorLabReportsPage() {
                 <div key={i} className="grid grid-cols-6 gap-2">
                   {[["Test Name","test_name","text"],["Value","value","number"],["Unit","unit","text"],["Ref Low","reference_low","number"],["Ref High","reference_high","number"]].map(([ph, field, type]) => (
                     <input key={String(field)} type={String(type)} placeholder={String(ph)}
-                      value={(v as any)[field as string] ?? ""}
+                      value={(v[field as keyof LabValue] ?? "") as string | number}
                       onChange={e => updateValue(i, String(field), type === "number" ? (e.target.value ? parseFloat(e.target.value) : null) : e.target.value)}
                       className="glass-sm px-2 py-1.5 text-xs text-gray-200 rounded-lg border border-gray-700 outline-none"/>
                   ))}

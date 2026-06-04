@@ -8,7 +8,7 @@ import Reveal from "@/components/ui/Reveal";
 import StatTile from "@/components/ui/StatTile";
 import {
   Pill, Bell, Calendar, CheckCircle, AlertTriangle, Sparkles,
-  User, Info, XCircle, ChevronDown, ChevronUp, Clock, Activity,
+  User, Info, XCircle, ChevronDown, Clock, Activity,
 } from "lucide-react";
 
 interface Prescription {
@@ -40,7 +40,7 @@ function daysBetween(start: string, days: number | null) {
   return { end, diff };
 }
 
-function RxCard({ rx, index }: { rx: Prescription; index: number }) {
+function RxCard({ rx }: { rx: Prescription }) {
   const [open, setOpen] = useState(false);
   const countdown = daysBetween(rx.start_date, rx.duration_days);
   const isExpiring = countdown && countdown.diff >= 0 && countdown.diff <= 7;
@@ -175,7 +175,7 @@ export default function MedicationsPage() {
       setRxs(rxData);
       setReminders(remData.reminders);
     }).finally(() => setLoading(false));
-  }, []);
+  }, [user]);
 
   const filtered = rxs.filter(r => filter === "all" || r.status === filter);
   const counts = {
@@ -324,7 +324,7 @@ export default function MedicationsPage() {
             initial="hidden" animate="visible" variants={stagger(0, 0.05)}
             className="space-y-3"
           >
-            {filtered.map((rx, i) => <RxCard key={rx.id} rx={rx} index={i} />)}
+            {filtered.map((rx) => <RxCard key={rx.id} rx={rx} />)}
           </motion.div>
         </AnimatePresence>
       )}

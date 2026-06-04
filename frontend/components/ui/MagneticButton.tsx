@@ -31,7 +31,7 @@ export default function MagneticButton({
       onMouseMove={onMove}
       onMouseLeave={onLeave}
       className={clsx("btn-primary", className)}
-      {...(rest as any)}
+      {...(rest as React.ButtonHTMLAttributes<HTMLButtonElement>)}
     >
       {children}
     </motion.button>

@@ -8,7 +8,7 @@ import { alertConfirm, toastInfo } from "@/lib/alerts";
 import AuroraBackground from "@/components/effects/AuroraBackground";
 import {
   Activity, LayoutDashboard, FileText, Search, MessageSquare,
-  Users, BarChart3, LogOut, Brain, Stethoscope, Shield,
+  Users, BarChart3, LogOut, Brain, Shield,
   Menu, X, Leaf, FlaskConical,
 } from "lucide-react";
 import NotificationBell from "./NotificationBell";

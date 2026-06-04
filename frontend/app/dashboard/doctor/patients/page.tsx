@@ -30,15 +30,16 @@ export default function DoctorPatientsPage() {
     if (!form.full_name.trim()) return;
     setCreating(true);
     try {
-      const res = await apiFetch<any>("/doctor/patients/create", {
+      const res = await apiFetch<unknown>("/doctor/patients/create", {
         method: "POST",
         body: JSON.stringify({ full_name: form.full_name, phone: form.phone || null, age: form.age ? parseInt(form.age) : null, gender: form.gender }),
       });
-      setNewCreds({ email: res.email, password: res.password, patient_code: res.patient_code, full_name: res.full_name });
+      const data = res as { email: string; password: string; patient_code: string; full_name: string };
+      setNewCreds({ email: data.email, password: data.password, patient_code: data.patient_code, full_name: data.full_name });
       setShowModal(false);
       setForm({ full_name: "", phone: "", age: "", gender: "male" });
       load();
-    } catch (e: any) { toastError("Could not create patient", e.message); }
+    } catch (e: unknown) { toastError("Could not create patient", e instanceof Error ? e.message : "Unknown error"); }
     finally { setCreating(false); }
   }
 

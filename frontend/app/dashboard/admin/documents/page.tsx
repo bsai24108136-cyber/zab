@@ -56,7 +56,7 @@ export default function AdminDocumentsPage() {
       await apiFetch(`/admin/documents/${id}`, { method: "DELETE" });
       setDocs(prev => prev.filter(d => d.id !== id));
       toastSuccess("Document deleted");
-    } catch (e: any) { toastError("Delete failed", e.message); }
+    } catch (e: unknown) { toastError("Delete failed", e instanceof Error ? e.message : "Unknown error"); }
     finally { setDeleting(null); }
   }
 

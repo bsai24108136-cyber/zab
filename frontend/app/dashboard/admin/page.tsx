@@ -34,7 +34,7 @@ export default function AdminDashboard() {
     Promise.all([
       apiFetch<SystemHealth>("/admin/system-health").catch(() => null),
       apiFetch<Costs>("/admin/costs").catch(() => null),
-      apiFetch<any[]>("/admin/doctors").catch(() => []),
+      apiFetch<unknown[]>("/admin/doctors").catch(() => []),
     ]).then(([h, c, d]) => {
       setHealth(h); setCosts(c); setDoctorCount(d?.length ?? 0);
     }).finally(() => setLoading(false));

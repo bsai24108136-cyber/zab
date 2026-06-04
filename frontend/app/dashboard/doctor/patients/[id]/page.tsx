@@ -21,10 +21,16 @@ interface RxRow {
   instructions: string; duration_days: number; start_date: string; status: string;
 }
 
+interface DocRecord { id: string; filename: string; upload_date: string; chunk_count: number; status: string; }
+interface MedRecord { id: string; visit_date: string; diagnosis: string; symptoms: string; }
+interface LabRecord { id: string; result_status: string; doctor_note: string; uploaded_at: string; }
+
 interface Summary {
   profile: { id: string; full_name: string; email: string; phone: string | null; created_at: string; };
-  documents: any[]; medical_records: any[]; prescriptions: RxRow[]; lab_reports: any[];
+  documents: DocRecord[]; medical_records: MedRecord[]; prescriptions: RxRow[]; lab_reports: LabRecord[];
 }
+
+interface AIQueryResult { answer?: string; model?: string; disclaimer?: string; error?: string; }
 
 const TABS = ["Overview", "Documents", "Prescriptions", "Lab Reports", "Timeline", "AI Analysis"] as const;
 type Tab = typeof TABS[number];
@@ -67,7 +73,7 @@ export default function PatientDetailPage() {
   const [loading, setLoading] = useState(true);
   const [tab, setTab] = useState<Tab>("Overview");
   const [aiQuery, setAiQuery] = useState("");
-  const [aiResult, setAiResult] = useState<any>(null);
+  const [aiResult, setAiResult] = useState<AIQueryResult | null>(null);
   const [aiLoading, setAiLoading] = useState(false);
 
   // Prescription modals
@@ -161,12 +167,12 @@ export default function PatientDetailPage() {
     if (!aiQuery.trim()) return;
     setAiLoading(true);
     try {
-      const res = await apiFetch<any>("/ai/doctor/query", {
+      const res = await apiFetch<AIQueryResult>("/ai/doctor/query", {
         method: "POST",
         body: JSON.stringify({ query: aiQuery, patient_id: id, query_type: "query" }),
       });
       setAiResult(res);
-    } catch (e: any) { setAiResult({ error: e.message }); }
+    } catch (e: unknown) { setAiResult({ error: e instanceof Error ? e.message : "Unknown error" }); }
     finally { setAiLoading(false); }
   }
 
@@ -225,7 +231,7 @@ export default function PatientDetailPage() {
       }
       await loadSummary();
       setTimeout(() => { setShowAddRx(false); setEditRx(null); setRxMsg(""); }, 1200);
-    } catch (e: any) { setRxMsg(`❌ ${e.message}`); }
+    } catch (e: unknown) { setRxMsg(`❌ ${e instanceof Error ? e.message : "Unknown error"}`); }
     finally { setRxSaving(false); }
   }
 
@@ -242,7 +248,7 @@ export default function PatientDetailPage() {
       await apiFetch(`/prescriptions/${rxId}`, { method: "DELETE" });
       await loadSummary();
       toastSuccess("Prescription cancelled");
-    } catch (e: any) { toastError("Could not cancel", e.message); }
+    } catch (e: unknown) { toastError("Could not cancel", e instanceof Error ? e.message : "Unknown error"); }
   }
 
   if (loading) return <div className="space-y-4">{[1,2,3].map(i => <div key={i} className="skeleton h-24 rounded-xl"/>)}</div>;
@@ -609,7 +615,7 @@ export default function PatientDetailPage() {
                   if (!editRx && ixResult?.verdict === "DANGEROUS") {
                     if (confirmText !== "CONFIRM") { setRxMsg("❌ Type CONFIRM in the box to override a DANGEROUS interaction"); return; }
                     // Pass override flag + warning text into saveRx via form
-                    setRxForm(f => ({ ...f } as any));
+                    setRxForm(f => ({ ...f }));
                     // Save with override metadata
                     (async () => {
                       if (!rxForm.medicine_name.trim()) { setRxMsg("Medicine name is required"); return; }
@@ -632,7 +638,7 @@ export default function PatientDetailPage() {
                         setRxMsg("✅ Prescription saved (override recorded)");
                         await loadSummary();
                         setTimeout(() => { setShowAddRx(false); setIxResult(null); setConfirmText(""); setRxMsg(""); }, 1200);
-                      } catch (e: any) { setRxMsg(`❌ ${e.message}`); }
+                      } catch (e: unknown) { setRxMsg(`❌ ${e instanceof Error ? e.message : "Unknown error"}`); }
                       finally { setRxSaving(false); }
                     })();
                     return;
@@ -669,7 +675,7 @@ export default function PatientDetailPage() {
                 <h3 className="font-bold text-gray-100 flex items-center gap-2">
                   <BarChart2 className="w-4 h-4 text-purple-400" />Generate Progress Report
                 </h3>
-                <p className="text-xs text-gray-500 mt-0.5">AI-generated PDF using patient's real records</p>
+                <p className="text-xs text-gray-500 mt-0.5">AI-generated PDF using patient&apos;s real records</p>
               </div>
               <button onClick={() => setShowProgress(false)} className="text-gray-500 hover:text-gray-300"><X className="w-4 h-4" /></button>
             </div>

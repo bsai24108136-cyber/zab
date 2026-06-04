@@ -17,8 +17,10 @@ interface Trend {
   change_pct: number;
   readings: Reading[];
 }
+interface TimelineValue { metric: string; value: string | number; unit: string; }
+interface TimelineEntry { date: string; values: TimelineValue[]; }
 interface TimelineData {
-  timeline: any[];
+  timeline: TimelineEntry[];
   trends: Record<string, Trend>;
   ai_analysis: string;
   model: string;
@@ -50,15 +52,15 @@ export default function TimelineTab({ patientId }: { patientId: string }) {
   const [data, setData] = useState<TimelineData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-  const [modal, setModal] = useState<any | null>(null);
+  const [modal, setModal] = useState<TimelineEntry | null>(null);
 
   const load = useCallback(async () => {
     setLoading(true); setError("");
     try {
       const res = await apiFetch<TimelineData>(`/ai/temporal/${patientId}`);
       setData(res);
-    } catch (e: any) {
-      setError(e.message ?? "Failed to load timeline");
+    } catch (e: unknown) {
+      setError(e instanceof Error ? e.message : "Failed to load timeline");
     } finally {
       setLoading(false);
     }
@@ -101,7 +103,7 @@ export default function TimelineTab({ patientId }: { patientId: string }) {
     <div className="glass p-10 text-center">
       <Activity className="mx-auto mb-2 h-7 w-7 text-ink-300" />
       <p className="text-sm text-ink-100">No numeric health values found in records yet.</p>
-      <p className="mt-1 text-xs text-ink-300">Add visit notes with values like "Blood Sugar 140 mg/dL".</p>
+      <p className="mt-1 text-xs text-ink-300">Add visit notes with values like &quot;Blood Sugar 140 mg/dL&quot;.</p>
     </div>
   );
 
@@ -134,8 +136,9 @@ export default function TimelineTab({ patientId }: { patientId: string }) {
                 dot={{ r: 4, cursor: "pointer", strokeWidth: 0, fill: LINE_COLORS[i % LINE_COLORS.length] }}
                 activeDot={{
                   r: 6,
-                  onClick: (_: any, payload: any) => {
-                    const entry = data.timeline.find(t => t.date === payload?.payload?.date);
+                  onClick: (_: unknown, payload: unknown) => {
+                    const p = payload as { payload?: { date?: string } } | undefined;
+                    const entry = data.timeline.find(t => t.date === p?.payload?.date);
                     if (entry) setModal(entry);
                   },
                 }}
@@ -200,7 +203,7 @@ export default function TimelineTab({ patientId }: { patientId: string }) {
                 </button>
               </div>
               <div className="space-y-1 text-sm text-ink-100">
-                {modal.values?.map((v: any, i: number) => (
+                {modal.values?.map((v: TimelineValue, i: number) => (
                   <p key={i} className="flex items-baseline justify-between gap-3 rounded-lg bg-white/5 px-3 py-1.5">
                     <span className="text-ink-200">{v.metric}</span>
                     <span className="font-semibold">{v.value} <span className="text-xs font-normal text-ink-300">{v.unit}</span></span>
@@ -265,7 +268,7 @@ function TimelineGuide() {
                 <p className="mb-1 text-[11px] font-semibold text-emerald-300">Tips</p>
                 <ul className="space-y-0.5 pl-4 text-[11px] leading-relaxed text-emerald-200/90 list-disc">
                   <li>Add values in <strong>visit notes</strong> or <strong>lab report notes</strong></li>
-                  <li>Use consistent metric names (e.g. always "Blood Sugar", not sometimes "Glucose")</li>
+                  <li>Use consistent metric names (e.g. always &quot;Blood Sugar&quot;, not sometimes &quot;Glucose&quot;)</li>
                   <li>At least <strong>2 data points</strong> are needed before a trend line appears</li>
                   <li>Click any dot on the chart to see the original visit record</li>
                 </ul>

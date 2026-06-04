@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { apiFetch, API_URL } from "@/lib/api";
 import { getAuth } from "@/lib/auth";
 import { toastError, toastSuccess } from "@/lib/alerts";
-import { Brain, RefreshCw, Download, FileText, FileType2 } from "lucide-react";
+import { Brain, RefreshCw, FileText, FileType2 } from "lucide-react";
 
 interface SummarySections {
   primary_conditions: string;

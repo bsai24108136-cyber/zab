@@ -5,7 +5,7 @@ import { apiFetch, apiUpload } from "@/lib/api";
 import { useDropzone } from "react-dropzone";
 import { alertConfirm, toastError, toastSuccess } from "@/lib/alerts";
 import {
-  Upload, FileText, Trash2, Eye, CheckCircle,
+  Upload, Trash2, Eye, CheckCircle,
   Clock, AlertCircle, Loader2, X, File
 } from "lucide-react";
 
@@ -131,7 +131,7 @@ export default function DocumentsPage() {
       {/* Dropzone */}
       <motion.div
         whileHover={{ scale: 1.005 }}
-        {...(getRootProps() as any)}
+        {...getRootProps()}
         className={`glass p-10 border-2 border-dashed text-center cursor-pointer transition-all duration-300
           ${isDragActive ? "border-cyan-400/70 bg-cyan-400/5 shadow-glow-cyan" : "border-white/10 hover:border-white/25"}`}
       >

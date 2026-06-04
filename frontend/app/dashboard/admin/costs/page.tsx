@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { apiFetch } from "@/lib/api";
 import { fadeUp } from "@/lib/motion";
 import { DollarSign, TrendingUp, CheckCircle, AlertTriangle } from "lucide-react";
-import { BarChart, Bar, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
 
 interface Costs {
   gemini: { total_calls: number; total_tokens: number; estimated_cost_usd: number };
