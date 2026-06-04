@@ -17,6 +17,11 @@ interface Patient {
   created_at: string; is_active: boolean;
 }
 
+interface NotificationSummary {
+  critical_count?: number;
+  urgent_count?: number;
+}
+
 export default function DoctorDashboard() {
   const [patients, setPatients] = useState<Patient[]>([]);
   const [docs, setDocs] = useState<unknown[]>([]);
@@ -28,7 +33,7 @@ export default function DoctorDashboard() {
     Promise.all([
       apiFetch<Patient[]>("/admin/users").catch(() => []),
       apiFetch<unknown[]>("/documents/").catch(() => []),
-      apiFetch<unknown>("/notifications/").catch(() => null),
+      apiFetch<NotificationSummary>("/notifications/").catch(() => null),
     ]).then(([users, docList, notifs]) => {
       setPatients(users.filter((u: Patient) => u?.id && u?.email).slice(0, 10));
       setDocs(docList);

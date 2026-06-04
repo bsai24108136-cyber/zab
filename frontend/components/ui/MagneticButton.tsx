@@ -3,9 +3,12 @@ import { motion, useMotionValue, useSpring } from "framer-motion";
 import { ButtonHTMLAttributes, MouseEvent, useRef } from "react";
 import clsx from "clsx";
 
-interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
+type Props = Omit<
+  ButtonHTMLAttributes<HTMLButtonElement>,
+  "onAnimationStart" | "onAnimationEnd" | "onAnimationIteration" | "onDrag" | "onDragStart" | "onDragEnd"
+> & {
   strength?: number;
-}
+};
 
 export default function MagneticButton({
   children, className, strength = 0.35, ...rest
@@ -31,7 +34,7 @@ export default function MagneticButton({
       onMouseMove={onMove}
       onMouseLeave={onLeave}
       className={clsx("btn-primary", className)}
-      {...(rest as React.ButtonHTMLAttributes<HTMLButtonElement>)}
+      {...rest}
     >
       {children}
     </motion.button>
