@@ -122,7 +122,7 @@ export default function LandingPage() {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-cyan-400 opacity-75" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-cyan-400" />
               </span>
-              <span className="font-medium text-ink-200">Live · Gemini 1.5 + GPT-4o-mini</span>
+              <span className="font-medium text-ink-200">Live · Gemini + GROQ</span>
             </motion.div>
 
             <h1
