@@ -45,7 +45,7 @@ export default function AdminAuditPage() {
       </motion.div>
 
       {/* Summary stats */}
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
         <div className="glass-sm p-4">
           <p className="text-xs text-gray-500 uppercase tracking-wider">Total Interactions</p>
           <p className="text-xl font-bold text-gray-100 mt-1">{audit.length}</p>

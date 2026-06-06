@@ -95,13 +95,13 @@ export default function DoctorDashboard() {
                 Doctor <span className="gradient-text-animated">Workbench</span>
               </motion.h2>
               <motion.p variants={fadeUp} className="mt-1 text-sm text-ink-200">
-                Clinical AI powered by Grok + Gemini 2.5 Flash
+                Clinical AI powered by Grok / Llama-3.3
               </motion.p>
             </div>
           </div>
           <motion.div variants={fadeUp} className="flex items-center gap-2">
             <span className="badge-cyan"><Sparkles className="h-3.5 w-3.5" /> Grok</span>
-            <span className="badge-gemini">Gemini 2.5</span>
+            <span className="badge-gemini">Llama-3.3</span>
           </motion.div>
         </div>
       </motion.div>
@@ -110,7 +110,7 @@ export default function DoctorDashboard() {
       <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
         <StatTile icon={<Users className="h-5 w-5" />}      label="Patients"   value={patients.length}              accent="cyan"   delay={0.00} />
         <StatTile icon={<FileText className="h-5 w-5" />}   label="Documents"  value={(docs as unknown[]).length}   accent="violet" delay={0.05} />
-        <StatTile icon={<Brain className="h-5 w-5" />}      label="AI Model"   value="Grok"                          accent="mint"   delay={0.10} sub="+ Gemini 2.5" raw />
+        <StatTile icon={<Brain className="h-5 w-5" />}      label="AI Model"   value="Grok"                          accent="mint"   delay={0.10} sub="Llama-3.3" raw />
         <StatTile icon={<TrendingUp className="h-5 w-5" />} label="Tools"      value={10}                            accent="amber"  delay={0.15} sub="agent tools" />
       </div>
 
@@ -126,7 +126,7 @@ export default function DoctorDashboard() {
                 <Brain className="mb-3 h-8 w-8 text-violet-300 transition-transform group-hover:scale-110" />
                 <h3 className="font-semibold text-ink-50">AI Assistant</h3>
                 <p className="mt-1 text-xs text-ink-300">6-tab clinical intelligence</p>
-                <div className="badge-gemini mt-3 text-[10px]">Grok / Gemini 2.5</div>
+                <div className="badge-gemini mt-3 text-[10px]">Grok / Llama-3.3</div>
               </GlassCard>
             </Link>
           </Reveal>

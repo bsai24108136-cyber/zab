@@ -65,7 +65,7 @@ export default function DoctorPatientsPage() {
         <div className="glass border border-teal-500/30 bg-teal-500/10 p-5 relative">
           <button onClick={() => setNewCreds(null)} className="absolute top-3 right-3 text-gray-500 hover:text-gray-300"><X className="w-4 h-4" /></button>
           <p className="text-teal-300 font-semibold text-sm mb-3">✅ Patient created — share these credentials with <strong>{newCreds.full_name}</strong></p>
-          <div className="grid grid-cols-2 gap-3 text-xs font-mono">
+          <div className="grid grid-cols-1 gap-3 text-xs font-mono sm:grid-cols-2">
             {[["Email (Login)", newCreds.email], ["Password (One-time)", newCreds.password]].map(([label, val]) => (
               <div key={label} className="glass-sm p-3">
                 <p className="text-gray-500 mb-1">{label}</p>

@@ -85,7 +85,7 @@ export default function PatientDashboard() {
             </div>
           </div>
           <motion.div variants={fadeUp} className="flex items-center gap-2">
-            <span className="badge-gemini"><Sparkles className="h-3.5 w-3.5" /> Gemini 1.5 Flash</span>
+            <span className="badge-gemini"><Sparkles className="h-3.5 w-3.5" /> Grok / Llama-3.3</span>
           </motion.div>
         </div>
       </motion.div>
@@ -118,7 +118,7 @@ export default function PatientDashboard() {
       <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
         <StatTile icon={<FileText className="h-5 w-5" />}      label="My Documents"  value={docs.length}        accent="cyan"   delay={0.00} />
         <StatTile icon={<Bell className="h-5 w-5" />}          label="Reminders"     value={reminders?.count ?? 0} accent="amber"  delay={0.05} sub="next 7 days" />
-        <StatTile icon={<MessageSquare className="h-5 w-5" />} label="AI Model"      value="Gemini"             accent="mint"   delay={0.10} sub="1.5 Flash" raw />
+        <StatTile icon={<MessageSquare className="h-5 w-5" />} label="AI Model"      value="Grok"               accent="mint"   delay={0.10} sub="Llama-3.3" raw />
         <StatTile icon={<CheckCircle className="h-5 w-5" />}   label="Records Ready" value={ready}              accent="violet" delay={0.15} />
       </div>
 
@@ -134,7 +134,7 @@ export default function PatientDashboard() {
                 <MessageSquare className="mb-3 h-8 w-8 text-cyan-300 transition-transform group-hover:scale-110" />
                 <h3 className="font-semibold text-ink-50">Chat with AI</h3>
                 <p className="mt-1 text-xs text-ink-300">Ask about your records</p>
-                <div className="badge-gemini mt-3 text-[10px]">Gemini 2.5 Flash</div>
+                <div className="badge-gemini mt-3 text-[10px]">Grok / Llama-3.3</div>
               </GlassCard>
             </Link>
           </Reveal>

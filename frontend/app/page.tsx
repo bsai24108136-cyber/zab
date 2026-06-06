@@ -3,6 +3,7 @@ import { useRef, useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import gsap from "gsap";
 import { apiFetch } from "@/lib/api";
@@ -11,7 +12,7 @@ import { toastSuccess, alertError } from "@/lib/alerts";
 import { fadeUp, slideInRight, stagger } from "@/lib/motion";
 import AuroraBackground from "@/components/effects/AuroraBackground";
 import {
-  Activity, Lock, Mail, ChevronRight,
+  Lock, Mail, ChevronRight,
   Sparkles, ShieldCheck, Brain, Eye, EyeOff,
 } from "lucide-react";
 
@@ -25,7 +26,7 @@ const Hero3D = dynamic(() => import("@/components/effects/Hero3D"), {
 });
 
 const FEATURES = [
-  { icon: Brain,       title: "Agentic AI",         text: "Visible step indicators, tool chips, GPT-4o-mini & Gemini" },
+  { icon: Brain,       title: "Agentic AI",         text: "Visible step indicators, tool chips, Grok / Llama-3.3" },
   { icon: ShieldCheck, title: "Data Vault 2.0",     text: "Append-only schema, PIT snapshots, row-level security" },
   { icon: Sparkles,    title: "Semantic Search",    text: "384-dim embeddings + keyword hybrid, confidence scoring" },
 ];
@@ -93,9 +94,14 @@ export default function LandingPage() {
         <Link href="/" className="flex items-center gap-3 group">
           <div className="relative">
             <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-cyan-400 via-violet-500 to-pink-500 blur-md opacity-70 group-hover:opacity-100 transition-opacity" />
-            <div className="relative h-9 w-9 rounded-xl bg-gradient-to-br from-cyan-400 via-violet-500 to-pink-500 flex items-center justify-center">
-              <Activity className="h-5 w-5 text-white" strokeWidth={2.5} />
-            </div>
+            <Image
+              src="/new_logo.jpg"
+              alt="MediTrace"
+              width={36}
+              height={36}
+              priority
+              className="relative h-9 w-9 rounded-xl object-cover"
+            />
           </div>
           <div>
             <div className="text-sm font-bold tracking-tight text-ink-50">MediTrace</div>
@@ -104,8 +110,7 @@ export default function LandingPage() {
         </Link>
         <nav className="hidden md:flex items-center gap-2 text-sm">
           <a href="#features" className="btn-ghost">Features</a>
-          <a href="#login" className="btn-ghost">Sign in</a>
-          <Link href="/register" className="btn-secondary">Create account</Link>
+          <a href="#login" className="btn-secondary">Sign in</a>
         </nav>
       </header>
 
@@ -122,12 +127,12 @@ export default function LandingPage() {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-cyan-400 opacity-75" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-cyan-400" />
               </span>
-              <span className="font-medium text-ink-200">Live · Gemini + GROQ</span>
+              <span className="font-medium text-ink-200">Live · Grok / Llama-3.3</span>
             </motion.div>
 
             <h1
               ref={titleRef}
-              className="whitespace-nowrap text-2xl font-bold leading-[1.05] tracking-tight sm:text-3xl md:text-5xl lg:text-[1.75rem] xl:text-[2rem] 2xl:text-4xl"
+              className="whitespace-nowrap text-[5.6vw] font-bold leading-[1.05] tracking-tight sm:text-3xl md:text-5xl lg:text-[1.75rem] xl:text-[2rem] 2xl:text-4xl"
               aria-label={headline}
             >
               <span className="inline-block overflow-hidden align-bottom">
@@ -153,9 +158,6 @@ export default function LandingPage() {
               <a href="#login" className="btn-primary">
                 Sign in <ChevronRight className="h-4 w-4" />
               </a>
-              <Link href="/register" className="btn-secondary">
-                Create account
-              </Link>
             </motion.div>
           </motion.div>
 
@@ -172,9 +174,13 @@ export default function LandingPage() {
             <div className="pointer-events-none absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-cyan-500/20 via-violet-500/20 to-pink-500/20 blur-2xl" />
             <div className="glass-hi relative p-7 sm:p-8">
               <div className="mb-6 flex items-center gap-3">
-                <div className="h-10 w-10 rounded-xl bg-brand-gradient shadow-glow-violet flex items-center justify-center">
-                  <Activity className="h-5 w-5 text-white" strokeWidth={2.5} />
-                </div>
+                <Image
+                  src="/new_logo.jpg"
+                  alt="MediTrace"
+                  width={40}
+                  height={40}
+                  className="h-10 w-10 rounded-xl object-cover shadow-glow-violet"
+                />
                 <div>
                   <div className="text-base font-semibold text-ink-50">Sign in</div>
                   <div className="text-xs text-ink-300">Welcome back to MediTrace</div>
@@ -238,13 +244,6 @@ export default function LandingPage() {
                   </AnimatePresence>
                 </button>
               </form>
-
-              <p className="mt-6 text-center text-sm text-ink-200">
-                No account?{" "}
-                <Link href="/register" className="font-semibold gradient-text">
-                  Create one
-                </Link>
-              </p>
             </div>
           </div>
         </motion.div>

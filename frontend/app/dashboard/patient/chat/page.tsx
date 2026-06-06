@@ -39,7 +39,7 @@ export default function PatientChatPage() {
       id: "welcome",
       role: "assistant",
       content: "Hello! I'm your MediTrace Health Assistant 👋\n\nI can help you understand your medical records, check your medications, triage symptoms, and much more. How can I help you today?",
-      model: "gemini-1.5-flash",
+      model: "grok-llama-3.3",
     },
   ]);
   const [input, setInput] = useState("");
@@ -144,7 +144,7 @@ export default function PatientChatPage() {
                 Health <span className="gradient-text-animated">Assistant</span>
               </motion.h2>
               <motion.div variants={fadeUp} className="mt-0.5 flex items-center gap-1.5">
-                <span className="badge-gemini text-[10px]"><Sparkles className="w-2.5 h-2.5" />Gemini 1.5 Flash</span>
+                <span className="badge-gemini text-[10px]"><Sparkles className="w-2.5 h-2.5" />Grok / Llama-3.3</span>
               </motion.div>
             </div>
           </div>
@@ -217,7 +217,7 @@ export default function PatientChatPage() {
                 )}
 
                 {/* Model badge */}
-                {msg.model && <div className="badge-gemini text-[10px]"><Sparkles className="w-2.5 h-2.5" />Gemini 1.5 Flash</div>}
+                {msg.model && <div className="badge-gemini text-[10px]"><Sparkles className="w-2.5 h-2.5" />Grok / Llama-3.3</div>}
 
                 {/* Disclaimer */}
                 {msg.role === "assistant" && msg.id !== "welcome" && (

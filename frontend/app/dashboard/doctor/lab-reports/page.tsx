@@ -128,7 +128,7 @@ export default function DoctorLabReportsPage() {
         <h2 className="text-xl font-bold text-gray-100 flex items-center gap-2">
           <FlaskConical className="w-5 h-5 text-amber-400"/>Lab Reports
         </h2>
-        <div className="flex gap-2">
+        <div className="flex flex-wrap gap-2">
           <button onClick={() => setActiveTab("upload")}
             className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium border transition-all ${activeTab === "upload" ? "bg-purple-500/20 text-purple-300 border-purple-500/30" : "text-gray-400 glass-sm border-gray-700 hover:text-gray-200"}`}>
             <Upload className="w-4 h-4"/>Upload & AI Analyze
@@ -146,11 +146,11 @@ export default function DoctorLabReportsPage() {
           <div className="flex items-center gap-2 mb-1">
             <Brain className="w-4 h-4 text-purple-400"/>
             <h3 className="text-sm font-semibold text-gray-200">Upload Lab Report — AI Analysis</h3>
-            <span className="text-[10px] bg-purple-500/15 text-purple-300 border border-purple-500/20 px-2 py-0.5 rounded-full">Powered by Gemini</span>
+            <span className="text-[10px] bg-purple-500/15 text-purple-300 border border-purple-500/20 px-2 py-0.5 rounded-full">Powered by Grok</span>
           </div>
-          <p className="text-xs text-gray-500">Upload a PDF, DOCX, TXT, or CSV lab report. Gemini will extract and interpret the findings, flag abnormals, and suggest follow-up actions.</p>
+          <p className="text-xs text-gray-500">Upload a PDF, DOCX, TXT, or CSV lab report. Grok will extract and interpret the findings, flag abnormals, and suggest follow-up actions.</p>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div>
               <label htmlFor="lab-upload-patient" className="block mb-1.5 text-[11px] font-semibold uppercase tracking-[0.07em] text-ink-300">
                 Patient *
@@ -199,7 +199,7 @@ export default function DoctorLabReportsPage() {
 
           <button onClick={handleFileUpload} disabled={uploading || !uploadFile || !uploadPatient}
             className="w-full py-3 font-semibold text-sm bg-purple-500/20 hover:bg-purple-500/30 text-purple-300 border border-purple-500/30 rounded-xl transition-all disabled:opacity-50 flex items-center justify-center gap-2">
-            {uploading ? <><Loader2 className="w-4 h-4 animate-spin"/>Analyzing with Gemini AI…</> : <><Brain className="w-4 h-4"/>Upload & Analyze</>}
+            {uploading ? <><Loader2 className="w-4 h-4 animate-spin"/>Analyzing with Grok AI…</> : <><Brain className="w-4 h-4"/>Upload & Analyze</>}
           </button>
 
           {/* AI Result */}
@@ -217,7 +217,7 @@ export default function DoctorLabReportsPage() {
               {aiResult.ai_analysis?.error ? (
                 <div className="glass-sm p-4 border border-amber-500/20">
                   <p className="text-amber-400 text-sm">⚠️ AI analysis unavailable: {aiResult.ai_analysis.error}</p>
-                  <p className="text-xs text-gray-500 mt-1">The report was still saved. Add GEMINI_API_KEY to .env for AI analysis.</p>
+                  <p className="text-xs text-gray-500 mt-1">The report was still saved. Add GROQ_API_KEY to .env for AI analysis.</p>
                 </div>
               ) : (
                 <>
@@ -361,7 +361,7 @@ export default function DoctorLabReportsPage() {
               <h3 className="font-bold text-gray-100 flex items-center gap-2"><FlaskConical className="w-4 h-4 text-amber-400"/>Manual Lab Entry</h3>
               <button onClick={() => setShowManualModal(false)} className="text-gray-500 hover:text-gray-300"><X className="w-4 h-4"/></button>
             </div>
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
               <div>
                 <label className="text-xs text-gray-400 mb-1 block">Patient *</label>
                 <select value={form.patient_id} onChange={e => setForm(f=>({...f, patient_id: e.target.value}))}
@@ -389,7 +389,7 @@ export default function DoctorLabReportsPage() {
                 <button onClick={addValueRow} className="text-xs text-amber-400 hover:text-amber-300 flex items-center gap-1"><Plus className="w-3 h-3"/>Add Row</button>
               </div>
               {values.map((v, i) => (
-                <div key={i} className="grid grid-cols-6 gap-2">
+                <div key={i} className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-6">
                   {[["Test Name","test_name","text"],["Value","value","number"],["Unit","unit","text"],["Ref Low","reference_low","number"],["Ref High","reference_high","number"]].map(([ph, field, type]) => (
                     <input key={String(field)} type={String(type)} placeholder={String(ph)}
                       value={(v[field as keyof LabValue] ?? "") as string | number}

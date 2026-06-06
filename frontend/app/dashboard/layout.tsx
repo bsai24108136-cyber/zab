@@ -2,12 +2,13 @@
 import { useEffect, useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence, LayoutGroup } from "framer-motion";
 import { getAuth, clearAuth, AuthUser } from "@/lib/auth";
 import { alertConfirm, toastInfo } from "@/lib/alerts";
 import AuroraBackground from "@/components/effects/AuroraBackground";
 import {
-  Activity, LayoutDashboard, FileText, Search, MessageSquare,
+  LayoutDashboard, FileText, Search, MessageSquare,
   Users, BarChart3, LogOut, Brain, Shield,
   Menu, X, Leaf, FlaskConical,
 } from "lucide-react";
@@ -133,9 +134,14 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
           <Link href={`/dashboard/${user.role}`} className="group flex items-center gap-3">
             <div className="relative">
               <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-cyan-400 via-violet-500 to-pink-500 blur-md opacity-70 transition-opacity group-hover:opacity-100" />
-              <div className={`relative flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br ${roleGradient(user.role)}`}>
-                <Activity className="h-5 w-5 text-white" strokeWidth={2.5} />
-              </div>
+              <Image
+                src="/new_logo.jpg"
+                alt="MediTrace"
+                width={36}
+                height={36}
+                priority
+                className="relative h-9 w-9 rounded-xl object-cover"
+              />
             </div>
             <div>
               <div className="text-sm font-bold text-ink-50">MediTrace</div>

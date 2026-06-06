@@ -278,7 +278,7 @@ export default function PatientDetailPage() {
       <AISummaryCard patientId={id} />
 
       {/* Stat bar */}
-      <div className="grid grid-cols-4 gap-3">
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
         {[["Documents", summary.documents.length, "text-blue-400"],
           ["Records", summary.medical_records.length, "text-purple-400"],
           ["Prescriptions", summary.prescriptions.length, "text-teal-400"],
@@ -668,7 +668,7 @@ export default function PatientDetailPage() {
             initial={{ opacity: 0, scale: 0.95, y: 10 }} animate={{ opacity: 1, scale: 1, y: 0 }} exit={{ opacity: 0, scale: 0.95, y: 10 }}
             transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
             onClick={e => e.stopPropagation()}
-            className="glass-hi max-w-lg w-full p-6 space-y-5">
+            className="glass-hi max-h-[90vh] w-full max-w-lg space-y-5 overflow-y-auto p-6">
             {/* Header */}
             <div className="flex items-center justify-between">
               <div>
@@ -701,7 +701,7 @@ export default function PatientDetailPage() {
             {/* Preview */}
             {progressLoading && (
               <div className="space-y-2">
-                <div className="grid grid-cols-4 gap-2">
+                <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
                   {[1,2,3,4].map(i => <div key={i} className="skeleton h-12" />)}
                 </div>
                 <div className="skeleton h-20" />
@@ -711,7 +711,7 @@ export default function PatientDetailPage() {
             {!progressLoading && progressData && (
               <div className="space-y-4">
                 {/* 4 metric chips */}
-                <div className="grid grid-cols-4 gap-2">
+                <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
                   {[
                     { label: "Visits",      val: progressData.metrics.total_visits,  danger: false },
                     { label: "Active meds", val: progressData.metrics.active_meds,   danger: false },

@@ -134,14 +134,14 @@ export default function DoctorSearchPage() {
           >
             <Reveal>
               <div className="glass p-4 space-y-3">
-                <div className="flex gap-3">
+                <div className="flex flex-col gap-3 sm:flex-row">
                   <div className="relative flex-1">
                     <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500"/>
                     <input type="text" value={query} onChange={e=>setQuery(e.target.value)}
                       onKeyDown={e=>e.key==="Enter"&&doSearch()} placeholder="Search patient documents…" className="input pl-10"/>
                   </div>
                   <input type="text" value={patientId} onChange={e=>setPatientId(e.target.value)}
-                    placeholder="Patient ID (optional)" className="input w-48"/>
+                    placeholder="Patient ID (optional)" className="input w-full sm:w-48"/>
                   <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.97 }}

@@ -269,6 +269,7 @@ export default function AdminUsersPage() {
             </div>
           ) : (
             <div className="glass overflow-hidden">
+              <div className="overflow-x-auto">
               <table className="w-full text-sm">
                 <thead>
                   <tr className="text-xs text-gray-500 uppercase tracking-wider bg-gray-900/50">
@@ -301,6 +302,7 @@ export default function AdminUsersPage() {
                   ))}
                 </tbody>
               </table>
+              </div>
             </div>
           )}
         </div>

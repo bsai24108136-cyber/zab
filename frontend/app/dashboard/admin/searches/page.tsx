@@ -48,7 +48,7 @@ export default function AdminSearchesPage() {
       </motion.h2>
 
       {/* Metrics */}
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
         <div className="glass-sm p-4">
           <p className="text-xs text-gray-500 uppercase tracking-wider">Avg Confidence</p>
           <p className="text-xl font-bold text-teal-400 mt-1">{avgConf.toFixed(1)}%</p>

@@ -2,6 +2,7 @@
 import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { apiFetch } from "@/lib/api";
 import { saveAuth, AuthUser } from "@/lib/auth";
@@ -78,8 +79,15 @@ export default function RegisterPage() {
           initial="hidden" animate="visible" variants={stagger(0.1, 0.1)}
           className="mb-8 text-center"
         >
-          <motion.div variants={scaleIn} className="mx-auto mb-4 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-gradient shadow-glow-violet">
-            <Activity className="h-7 w-7 text-white" strokeWidth={2.5} />
+          <motion.div variants={scaleIn} className="mx-auto mb-4 inline-flex h-14 w-14 items-center justify-center overflow-hidden rounded-2xl shadow-glow-violet">
+            <Image
+              src="/new_logo.jpg"
+              alt="MediTrace"
+              width={56}
+              height={56}
+              priority
+              className="h-14 w-14 rounded-2xl object-cover"
+            />
           </motion.div>
           <motion.h1 variants={fadeUp} className="text-3xl font-bold tracking-tight sm:text-4xl">
             <span className="gradient-text-animated">Create your account</span>
