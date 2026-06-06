@@ -123,9 +123,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
       </AnimatePresence>
 
       {/* Sidebar */}
-      <motion.aside
-        initial={false}
-        animate={{ x: sidebarOpen ? 0 : undefined }}
+      <aside
         className={`fixed inset-y-0 left-0 z-30 flex w-64 flex-col border-r border-white/5 bg-[#0B0A14]/85 backdrop-blur-2xl transition-transform duration-300 lg:static lg:translate-x-0
           ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}`}
       >
@@ -211,7 +209,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             <LogOut className="h-4 w-4" /> Sign Out
           </button>
         </div>
-      </motion.aside>
+      </aside>
 
       {/* Main */}
       <div className="relative flex min-w-0 flex-1 flex-col">
